@@ -1,0 +1,7 @@
+{
+  "name": "moodrecipe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
