@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'preferencia',
+    loadComponent: () => import('./preferencia/preferencia.page').then( m => m.PreferenciaPage)
+  },
 ];
