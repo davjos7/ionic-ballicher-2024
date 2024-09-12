@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController} from '@ionic/angular';
+import { RouterModule,Router} from '@angular/router';
+
 
 
 @Component({
@@ -11,10 +13,13 @@ import { IonicModule, NavController} from '@ionic/angular';
 })
 export class PreferenciaPage{
 
-  constructor(private nav : NavController) { }
+  constructor(private nav : NavController,private router: Router) { }
 
   regresar(){
     this.nav.back();
+  }
+  elegirRecetas(){
+    this.router.navigate(['/recetas'])
   }
 
 }

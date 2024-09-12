@@ -15,44 +15,10 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col size="6" *ngFor="let estado of data.estados">
         <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://w7.pngwing.com/pngs/932/162/png-transparent-smiley-happiness-happy-face-face-smiley-emoticon-thumbnail.png" alt="">
-          <label>alegre</label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://static.vecteezy.com/system/resources/previews/019/782/478/original/angry-face-emoticon-free-png.png" alt="">
-          <label>molesto</label>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://images.vexels.com/media/users/3/146666/isolated/preview/55a0a64730867e41db8e1fc1fc23cd7a-lindo-emoticon-cansado.png" alt="">
-          <label>aburrido</label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://static.vecteezy.com/system/resources/previews/013/743/806/non_2x/sad-face-emoji-png.png" alt="">
-          <label>triste</label>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://img.freepik.com/vector-gratis/emoticono-corazones-ojos-ilustracion-3d-dibujo-dibujos-animados-cara-amarilla-comica-divertida-corazones-rosas-como-ojos-estilo-3d-sobre-fondo-blanco-amor-romance-concepto-san-valentin_778687-1641.jpg" alt="">
-          <label>romantico</label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="estado" (click)="elegirPreferencia()">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/1024px/1f62d.png" alt="">
-          <label>troste</label>
+          <img src="{{estado.imagen}}" alt="">
+          <label>{{estado.nombre}}</label>
         </div>
       </ion-col>
     </ion-row>
