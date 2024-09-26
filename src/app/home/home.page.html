@@ -15,7 +15,7 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let estado of data.estados">
+      <ion-col size="6" *ngFor="let estado of estados">
         <div class="estado" (click)="elegirPreferencia()">
           <img src="{{estado.imagen}}" alt="">
           <label>{{estado.nombre}}</label>

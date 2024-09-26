@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { IonicModule} from '@ionic/angular';
 import { RouterModule,Router} from '@angular/router';
-import * as estados from '../../assets/json/estados.json';
+
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,15 @@ import * as estados from '../../assets/json/estados.json';
   imports: [IonicModule,NgFor,RouterModule],
 })
 export class HomePage {
+  estados:any = []
 
-  data:any = estados;
-  constructor(private router : Router) {
-    console.log("recetas",this.data);
+  constructor(private router : Router, private http: HttpClient) {
+    this.http.get("https://cesar.pe/wp-json/ismem/estados").subscribe(
+      data => {
+        console.log("estados", data);
+        this.estados = data;
+      }
+    )
   }
 
   elegirPreferencia(){
